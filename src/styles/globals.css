@@ -1,0 +1,436 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Design 3 Color Tokens */
+:root {
+  /* Primary Colors */
+  --md-sys-color-primary: 103 80 164;
+  --md-sys-color-on-primary: 255 255 255;
+  --md-sys-color-primary-container: 234 221 255;
+  --md-sys-color-on-primary-container: 33 0 93;
+
+  /* Secondary Colors */
+  --md-sys-color-secondary: 98 91 113;
+  --md-sys-color-on-secondary: 255 255 255;
+  --md-sys-color-secondary-container: 232 222 248;
+  --md-sys-color-on-secondary-container: 29 25 43;
+
+  /* Tertiary Colors */
+  --md-sys-color-tertiary: 125 82 96;
+  --md-sys-color-on-tertiary: 255 255 255;
+  --md-sys-color-tertiary-container: 255 216 228;
+  --md-sys-color-on-tertiary-container: 55 11 30;
+
+  /* Error Colors */
+  --md-sys-color-error: 186 26 26;
+  --md-sys-color-on-error: 255 255 255;
+  --md-sys-color-error-container: 255 218 214;
+  --md-sys-color-on-error-container: 65 0 2;
+
+  /* Surface Colors */
+  --md-sys-color-surface: 254 247 255;
+  --md-sys-color-on-surface: 28 27 31;
+  --md-sys-color-surface-variant: 231 224 236;
+  --md-sys-color-on-surface-variant: 73 69 79;
+  --md-sys-color-surface-container-lowest: 255 255 255;
+  --md-sys-color-surface-container-low: 247 242 250;
+  --md-sys-color-surface-container: 243 237 247;
+  --md-sys-color-surface-container-high: 236 230 240;
+  --md-sys-color-surface-container-highest: 230 224 233;
+
+  /* Background Colors */
+  --md-sys-color-background: 254 247 255;
+  --md-sys-color-on-background: 28 27 31;
+
+  /* Outline Colors */
+  --md-sys-color-outline: 121 116 126;
+  --md-sys-color-outline-variant: 202 196 208;
+
+  /* Elevation & Shadow */
+  --md-sys-elevation-level0: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  --md-sys-elevation-level1: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-level2: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --md-sys-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-level4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-level5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+  /* Typography Scale */
+  --md-sys-typescale-display-large-size: 57px;
+  --md-sys-typescale-display-large-line-height: 64px;
+  --md-sys-typescale-display-large-weight: 400;
+  
+  --md-sys-typescale-display-medium-size: 45px;
+  --md-sys-typescale-display-medium-line-height: 52px;
+  --md-sys-typescale-display-medium-weight: 400;
+  
+  --md-sys-typescale-display-small-size: 36px;
+  --md-sys-typescale-display-small-line-height: 44px;
+  --md-sys-typescale-display-small-weight: 400;
+  
+  --md-sys-typescale-headline-large-size: 32px;
+  --md-sys-typescale-headline-large-line-height: 40px;
+  --md-sys-typescale-headline-large-weight: 400;
+  
+  --md-sys-typescale-headline-medium-size: 28px;
+  --md-sys-typescale-headline-medium-line-height: 36px;
+  --md-sys-typescale-headline-medium-weight: 400;
+  
+  --md-sys-typescale-headline-small-size: 24px;
+  --md-sys-typescale-headline-small-line-height: 32px;
+  --md-sys-typescale-headline-small-weight: 400;
+  
+  --md-sys-typescale-title-large-size: 22px;
+  --md-sys-typescale-title-large-line-height: 28px;
+  --md-sys-typescale-title-large-weight: 400;
+  
+  --md-sys-typescale-title-medium-size: 16px;
+  --md-sys-typescale-title-medium-line-height: 24px;
+  --md-sys-typescale-title-medium-weight: 500;
+  
+  --md-sys-typescale-title-small-size: 14px;
+  --md-sys-typescale-title-small-line-height: 20px;
+  --md-sys-typescale-title-small-weight: 500;
+  
+  --md-sys-typescale-body-large-size: 16px;
+  --md-sys-typescale-body-large-line-height: 24px;
+  --md-sys-typescale-body-large-weight: 400;
+  
+  --md-sys-typescale-body-medium-size: 14px;
+  --md-sys-typescale-body-medium-line-height: 20px;
+  --md-sys-typescale-body-medium-weight: 400;
+  
+  --md-sys-typescale-body-small-size: 12px;
+  --md-sys-typescale-body-small-line-height: 16px;
+  --md-sys-typescale-body-small-weight: 400;
+  
+  --md-sys-typescale-label-large-size: 14px;
+  --md-sys-typescale-label-large-line-height: 20px;
+  --md-sys-typescale-label-large-weight: 500;
+  
+  --md-sys-typescale-label-medium-size: 12px;
+  --md-sys-typescale-label-medium-line-height: 16px;
+  --md-sys-typescale-label-medium-weight: 500;
+  
+  --md-sys-typescale-label-small-size: 11px;
+  --md-sys-typescale-label-small-line-height: 16px;
+  --md-sys-typescale-label-small-weight: 500;
+}
+
+/* Dark Theme */
+.dark {
+  --md-sys-color-primary: 208 188 255;
+  --md-sys-color-on-primary: 54 44 63;
+  --md-sys-color-primary-container: 79 55 139;
+  --md-sys-color-on-primary-container: 234 221 255;
+
+  --md-sys-color-secondary: 204 194 220;
+  --md-sys-color-on-secondary: 51 47 65;
+  --md-sys-color-secondary-container: 74 68 88;
+  --md-sys-color-on-secondary-container: 232 222 248;
+
+  --md-sys-color-tertiary: 227 187 200;
+  --md-sys-color-on-tertiary: 76 37 50;
+  --md-sys-color-tertiary-container: 101 58 73;
+  --md-sys-color-on-tertiary-container: 255 216 228;
+
+  --md-sys-color-error: 255 180 171;
+  --md-sys-color-on-error: 105 0 5;
+  --md-sys-color-error-container: 147 0 10;
+  --md-sys-color-on-error-container: 255 218 214;
+
+  --md-sys-color-surface: 16 14 19;
+  --md-sys-color-on-surface: 230 224 233;
+  --md-sys-color-surface-variant: 73 69 79;
+  --md-sys-color-on-surface-variant: 202 196 208;
+  --md-sys-color-surface-container-lowest: 11 10 14;
+  --md-sys-color-surface-container-low: 24 23 28;
+  --md-sys-color-surface-container: 28 27 32;
+  --md-sys-color-surface-container-high: 39 38 43;
+  --md-sys-color-surface-container-highest: 49 48 54;
+
+  --md-sys-color-background: 16 14 19;
+  --md-sys-color-on-background: 230 224 233;
+
+  --md-sys-color-outline: 147 143 153;
+  --md-sys-color-outline-variant: 73 69 79;
+}
+
+/* Base Styles */
+* {
+  border-color: rgb(var(--md-sys-color-outline-variant));
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: rgb(var(--md-sys-color-background));
+  color: rgb(var(--md-sys-color-on-background));
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--md-sys-typescale-body-medium-size);
+  line-height: var(--md-sys-typescale-body-medium-line-height);
+  font-weight: var(--md-sys-typescale-body-medium-weight);
+}
+
+/* Typography Utilities */
+@layer components {
+  .display-large {
+    font-size: var(--md-sys-typescale-display-large-size);
+    line-height: var(--md-sys-typescale-display-large-line-height);
+    font-weight: var(--md-sys-typescale-display-large-weight);
+  }
+
+  .display-medium {
+    font-size: var(--md-sys-typescale-display-medium-size);
+    line-height: var(--md-sys-typescale-display-medium-line-height);
+    font-weight: var(--md-sys-typescale-display-medium-weight);
+  }
+
+  .display-small {
+    font-size: var(--md-sys-typescale-display-small-size);
+    line-height: var(--md-sys-typescale-display-small-line-height);
+    font-weight: var(--md-sys-typescale-display-small-weight);
+  }
+
+  .headline-large {
+    font-size: var(--md-sys-typescale-headline-large-size);
+    line-height: var(--md-sys-typescale-headline-large-line-height);
+    font-weight: var(--md-sys-typescale-headline-large-weight);
+  }
+
+  .headline-medium {
+    font-size: var(--md-sys-typescale-headline-medium-size);
+    line-height: var(--md-sys-typescale-headline-medium-line-height);
+    font-weight: var(--md-sys-typescale-headline-medium-weight);
+  }
+
+  .headline-small {
+    font-size: var(--md-sys-typescale-headline-small-size);
+    line-height: var(--md-sys-typescale-headline-small-line-height);
+    font-weight: var(--md-sys-typescale-headline-small-weight);
+  }
+
+  .title-large {
+    font-size: var(--md-sys-typescale-title-large-size);
+    line-height: var(--md-sys-typescale-title-large-line-height);
+    font-weight: var(--md-sys-typescale-title-large-weight);
+  }
+
+  .title-medium {
+    font-size: var(--md-sys-typescale-title-medium-size);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
+    font-weight: var(--md-sys-typescale-title-medium-weight);
+  }
+
+  .title-small {
+    font-size: var(--md-sys-typescale-title-small-size);
+    line-height: var(--md-sys-typescale-title-small-line-height);
+    font-weight: var(--md-sys-typescale-title-small-weight);
+  }
+
+  .body-large {
+    font-size: var(--md-sys-typescale-body-large-size);
+    line-height: var(--md-sys-typescale-body-large-line-height);
+    font-weight: var(--md-sys-typescale-body-large-weight);
+  }
+
+  .body-medium {
+    font-size: var(--md-sys-typescale-body-medium-size);
+    line-height: var(--md-sys-typescale-body-medium-line-height);
+    font-weight: var(--md-sys-typescale-body-medium-weight);
+  }
+
+  .body-small {
+    font-size: var(--md-sys-typescale-body-small-size);
+    line-height: var(--md-sys-typescale-body-small-line-height);
+    font-weight: var(--md-sys-typescale-body-small-weight);
+  }
+
+  .label-large {
+    font-size: var(--md-sys-typescale-label-large-size);
+    line-height: var(--md-sys-typescale-label-large-line-height);
+    font-weight: var(--md-sys-typescale-label-large-weight);
+  }
+
+  .label-medium {
+    font-size: var(--md-sys-typescale-label-medium-size);
+    line-height: var(--md-sys-typescale-label-medium-line-height);
+    font-weight: var(--md-sys-typescale-label-medium-weight);
+  }
+
+  .label-small {
+    font-size: var(--md-sys-typescale-label-small-size);
+    line-height: var(--md-sys-typescale-label-small-line-height);
+    font-weight: var(--md-sys-typescale-label-small-weight);
+  }
+}
+
+/* Surface Utilities */
+@layer components {
+  .surface {
+    background-color: rgb(var(--md-sys-color-surface));
+    color: rgb(var(--md-sys-color-on-surface));
+  }
+
+  .surface-variant {
+    background-color: rgb(var(--md-sys-color-surface-variant));
+    color: rgb(var(--md-sys-color-on-surface-variant));
+  }
+
+  .surface-container-lowest {
+    background-color: rgb(var(--md-sys-color-surface-container-lowest));
+  }
+
+  .surface-container-low {
+    background-color: rgb(var(--md-sys-color-surface-container-low));
+  }
+
+  .surface-container {
+    background-color: rgb(var(--md-sys-color-surface-container));
+  }
+
+  .surface-container-high {
+    background-color: rgb(var(--md-sys-color-surface-container-high));
+  }
+
+  .surface-container-highest {
+    background-color: rgb(var(--md-sys-color-surface-container-highest));
+  }
+
+  .primary {
+    background-color: rgb(var(--md-sys-color-primary));
+    color: rgb(var(--md-sys-color-on-primary));
+  }
+
+  .primary-container {
+    background-color: rgb(var(--md-sys-color-primary-container));
+    color: rgb(var(--md-sys-color-on-primary-container));
+  }
+
+  .secondary {
+    background-color: rgb(var(--md-sys-color-secondary));
+    color: rgb(var(--md-sys-color-on-secondary));
+  }
+
+  .secondary-container {
+    background-color: rgb(var(--md-sys-color-secondary-container));
+    color: rgb(var(--md-sys-color-on-secondary-container));
+  }
+}
+
+/* Elevation Utilities */
+@layer components {
+  .elevation-0 {
+    box-shadow: var(--md-sys-elevation-level0);
+  }
+
+  .elevation-1 {
+    box-shadow: var(--md-sys-elevation-level1);
+  }
+
+  .elevation-2 {
+    box-shadow: var(--md-sys-elevation-level2);
+  }
+
+  .elevation-3 {
+    box-shadow: var(--md-sys-elevation-level3);
+  }
+
+  .elevation-4 {
+    box-shadow: var(--md-sys-elevation-level4);
+  }
+
+  .elevation-5 {
+    box-shadow: var(--md-sys-elevation-level5);
+  }
+}
+
+/* Animation Utilities */
+@layer components {
+  .motion-safe {
+    transition: all 0.2s cubic-bezier(0.2, 0.0, 0, 1.0);
+  }
+
+  .motion-emphasis {
+    transition: all 0.3s cubic-bezier(0.05, 0.7, 0.1, 1.0);
+  }
+
+  .motion-expressive {
+    transition: all 0.5s cubic-bezier(0.3, 0.0, 0.8, 0.15);
+  }
+}
+
+/* Focus Styles */
+@layer components {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    focus-ring-color: rgb(var(--md-sys-color-primary));
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--md-sys-color-surface-variant) / 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--md-sys-color-outline) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--md-sys-color-outline) / 0.5);
+}
+
+/* Selection Styling */
+::selection {
+  background-color: rgb(var(--md-sys-color-primary) / 0.2);
+  color: rgb(var(--md-sys-color-on-surface));
+}
+
+/* Todo App Specific Styles */
+@layer components {
+  .todo-card {
+    @apply surface-container elevation-1 rounded-3xl p-6 motion-safe;
+  }
+
+  .todo-card:hover {
+    @apply elevation-2;
+  }
+
+  .todo-item {
+    @apply surface-container-low rounded-2xl p-4 motion-safe;
+    border: 1px solid rgb(var(--md-sys-color-outline-variant) / 0.2);
+  }
+
+  .todo-item.completed {
+    @apply opacity-70;
+    text-decoration: line-through;
+  }
+
+  .todo-button {
+    @apply primary rounded-full px-6 py-3 label-large motion-safe focus-ring;
+  }
+
+  .todo-button:hover {
+    @apply elevation-1;
+  }
+
+  .todo-input {
+    @apply surface-container-highest rounded-2xl px-4 py-3 body-large motion-safe focus-ring;
+    border: 1px solid rgb(var(--md-sys-color-outline-variant));
+  }
+
+  .todo-input:focus {
+    border-color: rgb(var(--md-sys-color-primary));
+  }
+}
